@@ -1,0 +1,51 @@
+/* el-form */
+
+/* 관리자 게시판 */
+.board-search-form.el-form {
+	margin-bottom: 50px;
+}
+
+.board-search-form.el-form .el-form-item {
+	border-top: 1px solid #ccc;
+	margin-bottom: 0;
+}
+
+.board-search-form.el-form .el-form-item:last-child {
+	/* border-bottom: 1px solid #ccc; */
+}
+
+.board-search-form.el-form
+	.el-form-item.el-submit-wrapper
+	> .el-form-item__content {
+	margin-top: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.board-search-form.el-form
+	.el-form-item.el-submit-wrapper
+	> .el-form-item__content
+	.el-button {
+	width: 120px;
+}
+
+.board-search-form.el-form .el-form-item__label {
+	height: auto;
+	width: 200px;
+	justify-content: start;
+	padding: 15px 10px;
+	background-color: #efefef;
+}
+
+.board-search-form.el-form .el-form-item__content {
+	height: auto;
+	padding: 15px 10px;
+}
+
+.mr-1 {
+	margin-right: 1rem;
+}
+
+.w-50 {
+	width: 50%;
+}

@@ -1,0 +1,178 @@
+@use 'element-plus/dist/index.css';
+
+.el-form {
+	strong {
+		font-weight: bold;
+		font-size: 1.125em;
+	}
+
+	.el-form-item {
+		margin-bottom: 0;
+		@include border(w90, bottom);
+
+		&:first-child,
+		&.top-border {
+			@include border(w90, top, 3px);
+		}
+
+		&.item-sub-content {
+			margin-bottom: unset;
+			border-bottom-style: unset;
+			border-bottom-color: unset;
+			border-bottom-width: unset;
+
+			&:first-child,
+			&.top-border {
+				border-top-style: unset;
+				border-top-color: unset;
+				border-top-width: unset;
+			}
+
+			:deep(.el-form-item__content) {
+				padding: unset;
+				width: 600px;
+			}
+		}
+
+		:deep(.el-form-item__label) {
+			background-color: #f8f8f8;
+			height: auto;
+			padding: 0.5em 1em;
+			color: #050505;
+			align-items: center;
+			align-content: center;
+			line-height: unset;
+			&.inline {
+				display: inline;
+			}
+		}
+
+		&.line-break-label {
+			:deep(.el-form-item__label) {
+				flex-wrap: wrap;
+			}
+		}
+
+		:deep(.el-form-item__content) {
+			padding: 0.5em 1em;
+		}
+
+		:deep(.el-input__wrapper) {
+			width: 100%;
+			max-width: 600px !important;
+		}
+
+		&.max {
+			:deep(.el-input__wrapper) {
+				max-width: unset;
+			}
+		}
+
+		&.validation {
+			:deep(.el-form-item__error) {
+				position: relative;
+				padding-top: 4px;
+				margin-bottom: -0.325em;
+				top: auto;
+				font-size: 14px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.el-form,
+.el-tabs {
+	.btn-wrap {
+		margin: 1em 0;
+		text-align: center;
+		&.left {
+			text-align: left;
+		}
+		&.right {
+			text-align: right;
+		}
+	}
+}
+
+.el-pagination {
+	margin: 1em 0;
+	justify-content: center;
+}
+
+.el-table {
+	:deep(.el-table__header) {
+		@include border(w90, top, 3px);
+		.cell {
+			color: #151515;
+		}
+	}
+	:deep(.el-table__cell) {
+		text-align: center;
+		&.left:not(th) {
+			text-align: left;
+		}
+	}
+	:deep(.el-table__empty-block) {
+		min-height: 400px;
+	}
+}
+
+.el-form-item__content {
+	padding: 0 1em;
+}
+
+.el-checkbox {
+	&:last-of-type {
+		margin-right: 30px;
+	}
+}
+
+/* 관리자 게시판 */
+.board-search-form.el-form {
+	margin-bottom: 50px;
+}
+
+.board-search-form.el-form .el-form-item {
+	border-top: 1px solid #ccc;
+	margin-bottom: 0;
+}
+
+.board-search-form.el-form .el-form-item:last-child {
+	/* border-bottom: 1px solid #ccc; */
+}
+
+.board-search-form.el-form
+	.el-form-item.el-submit-wrapper
+	> .el-form-item__content {
+	margin-top: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.board-search-form.el-form
+	.el-form-item.el-submit-wrapper
+	> .el-form-item__content
+	.el-button {
+	width: 120px;
+}
+
+.board-search-form.el-form .el-form-item__label {
+	height: auto;
+	width: 200px;
+	justify-content: start;
+	padding: 15px 10px;
+	background-color: #efefef;
+}
+
+.board-search-form.el-form .el-form-item__content {
+	height: auto;
+	padding: 15px 10px;
+}
+
+// Loading Bar
+.el-loading-mask {
+	top: 0;
+	left: 0;
+	position: fixed;
+}
